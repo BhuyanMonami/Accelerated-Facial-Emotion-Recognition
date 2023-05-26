@@ -40,3 +40,9 @@ The complete implementation of the code is as follows:
 - The compiler creates an emotion_recognition.o object file. Then implement the inference using the following command on the terminal:
 **nvcc -o emotion_recognition emotion_recognition.o**
 
+# References:
+1. Jordà, M., Valero-Lara, P. & Peña, A. J. cuConv: CUDA implementation of convolution for CNN inference. Clust. Comput. 25, 1459–1473 (2022)
+2. Warden, P. Why GEMM is at the heart of deep learning. Pete Warden’s blog
+https://petewarden.com/2015/04/20/why-gemm-is-at-the-heart-of-deep-learning/ (2015)
+3. Akhand, M. A. H., Roy, S., Siddique, N., Kamal, M. A. S. & Shimamura, T. Facial Emotion Recognition Using Transfer Learning in the Deep CNN. Electronics 10, 1036 (2021)
+
