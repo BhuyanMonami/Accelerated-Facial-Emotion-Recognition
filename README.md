@@ -23,20 +23,20 @@ The convolutions are converted into general matrix-to-matrix multiplications(GEM
 
 # Deliverables:
 The complete implementation of the code is as follows:
-- Download the JAFFE dataset either from http://www.kasrl.org/jaffe_download.html or from the Project repository sub-directory named "jaffedbase".
+- Download the JAFFE dataset either from http://www.kasrl.org/jaffe_download.html or from the Project repository sub-directory named **"jaffedbase"**.
 - Save the JAFFE dataset in the same directory as the codes.
 - Run the file vgg19.py using the following command on the terminal:
-# python vgg19.py --train_batch_size 32 --val_batch_size 24
+**python vgg19.py --train_batch_size 32 --val_batch_size 24**
 (The code will randomly split the dataset into two sub-directories namely ‘train’ and ‘val’, with 
 189 and 24 samples respectively).
 - Save the accuracy and loss metrics curve.
 - Save the trained model as: trained_model_VGG19.h5
 - Run the file emotion_recognition.py on the terminal using the following command:
-# python emotion_recognition.py
-- The emotion_recognition.py will generate the prediction images and the model weights for each layer as a text file and another text file with the shapes. Save the model weights as a subdirectory called "model_weights" in the same directory as your code. Likewise, save the dimensions file (dimensions.txt). 
+**python emotion_recognition.py**
+- The emotion_recognition.py will generate the prediction images and the model weights for each layer as a text file and another text file with the shapes. Save the model weights as a subdirectory called **"model_weights"** in the same directory as your code. Likewise, save the dimensions file (**dimensions.txt**). 
 - The code runs inference for one image to check the veracity and as a preliminary step towards hopefully a more robust algorithm in the future.
 - Compile the emotion_recognition.cu file using the following command on the terminal:
-# nvcc -c emotion_recognition.cu
+**nvcc -c emotion_recognition.cu**
 - The compiler creates an emotion_recognition.o object file. Then implement the inference using the following command on the terminal:
-# nvcc -o emotion_recognition emotion_recognition.o
+**nvcc -o emotion_recognition emotion_recognition.o**
 
