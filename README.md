@@ -20,7 +20,7 @@ within PyCharm IDE. The algorithm deploys the VGG19 architecture, freezing the p
 6. The updated weights and biases of the trained model are extracted in separate text files for each convolutional layer. The output shapes (or dimensions) of the trained model are also extracted and stored in a separate text file. (These files are uploaded to the repository). 
 7.  These parameters are then utilized for parallelizing the feedforward of the VGG19 architecture using CUDA using the following approach:
 The convolutions are converted into general matrix-to-matrix multiplications(GEMM) and parallelism is used at each layer in the forward propagation to improve memory efficiency and achieve a lower execution time. A function called “im_to_col” is employed to first convert the convolution operation into a simple GEMM operation. For any convolutional layer, filter-sized image patches(3x3) are extracted, with the given stride length and converted into columns. It‟s also made sure that the channels come one below the other in a column. To maintain the operation of convolution as expected, the filters are converted into rows, which get multiplied by the columns of im_to_col. The channels in the filter are hence placed (channel-wise) one after the other in the row. The fully connected layer directly can be implemented with a GEMM operation, so im_to_col is not required in this case.
-
+![Alt Text](https://petewarden.files.wordpress.com/2015/04/kernelview.png)
 # Deliverables:
 The complete implementation of the code is as follows:
 - Download the JAFFE dataset either from http://www.kasrl.org/jaffe_download.html or from the Project repository sub-directory named **"jaffedbase"**.
